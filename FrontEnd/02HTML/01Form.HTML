@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--폼태그:Server로 Client 정보 전달을위해 사용-->
+     <!--memberjoin.jsp(이것은 서버를넣어야하기때문에 아직은 비어있는상태)로
+         입력한 내용을 전달  get방식으로 -->
+
+
+   <!--action: 서버수신페이지-->
+   <!--method: 서버로 전달방식-->
+   <!--get: 서버수신페이지-->     
+    <form action="memberjoin.jsp" method="get">
+        <!--홍길동이라는이름을 담기위한 변수 name-->
+     <label> 이름</label> : <input tpye="text" name="name"><br>
+     <label> 나이</label> : <input tpye="text" name="age"><br>
+     <label> 주소</label> : <input tpye="text" name="addr"><br>  
+     <label> 성별</label> : <input tpye="text" name="gender"><br>
+     <input type="submit" value="전송">
+    </form>
+
+
+
+</body>
+</html>

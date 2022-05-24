@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <!--CSS  부트 스트랩 사이트에서 복사해옴-->
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       <!--script-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+
+    
+<body>
+   
+
+ 
+
+
+   
+
+    <div class="p-3 mb-2 bg-info text-dark"><h1>옥션 회원가입</h1></div>
+    
+    <style>
+   
+        td{
+            padding-bottom: 10px;
+        }
+        </style>
+    
+     
+    
+   
+    <h2>1.정보입력</h2>
+    
+    <form action ="join.jsp" > <!--method를지정하지않으면 기본적으로는 get으로 적용-->
+        <table>
+            <tr>
+                <td width="50px">ID</td>
+                <td><input name="userid"class="form-control" placeholder="아이디를 입력하세요"></td>
+            </tr>
+            <tr>
+              <td >PW</td>
+              <td><input type="password" name="pwd" class="form-control" placeholder="PW를 입력하세요"></td>
+          </tr>
+          <tr>
+              <td >Email</td>
+              <td><input type="email" class="form-control" placeholder="example@example.com"></td>
+          </tr>
+          <tr>
+              <td >GENDER</td>
+              <td>  <!--radio의 부분의 name(변수)이 동일해야한다-->
+                  <input type="radio" name="gender" value="M" class="form-check-input">남&nbsp;
+                    <!--"W" 뒤부분의 checked는 기본 상태로 여를 체크상태로 두겠다는의미-->
+                  <input type="radio" name="gender" value="W" checked class="form-check-input">여&nbsp;</td>
+          </tr>
+          <tr>
+              <td >Hobby</td>
+              <td>  <input type="checkbox" name="Hobby1" value="reading">독서&nbsp;
+                  <input type="checkbox" name="Hobby2" value="climing">등산&nbsp;
+                  <input type="checkbox" name="Hobby3" value="golf">골프&nbsp;
+                  <input type="checkbox" name="Hobby4" value="swimming">수영&nbsp;</td>
+          </tr>
+          <tr>
+              <td >Memo:</td>
+              <td> <textarea rows="10" cols="50" name="memo" class="form-control"></textarea></td>
+          </tr>
+          <tr>
+              <td> TEL:</td>
+              <td style="display:flex;"> <select name="tel1" class="form-select w-25">
+                  <option value="053">053</option>
+                  <option value="055">055</option>
+                  <option value="052" selected>052</option> <!--기본상태-->
+              </select>
+              -<input type="text" name="tel2" style="width:30px"  class="form-control w-25">
+              -<input type="text" name="tel3" style="width:30px"  class="form-control w-25"></td>
+          </tr>
+        
+         </table>
+      
+       
+
+        <h2 align="left">2.약관동의</h2>
+        
+        <table>
+            <!--ol,li 숫자 제거-->
+            <style>   
+                ol{
+                   list-style:none;  
+                   }
+                </style>
+        <ol>
+         <input type="radio" name="Agree" value="allAgree" >전체동의<br>
+        <li>
+         <input type="radio" name="Agree2" value="Agree1">이용약관<br>
+         <input type="radio" name="Agree3" value="Agree2">개인정보수집<br>
+         <input type="radio" name="Agree4" value="Agree4">3자동의<br>
+         <input type="radio" name="Agree5" value="Agree5">위치정보약관<br>
+        </li>
+        </ol>
+    </table>
+  
+
+<td><input type="submit" value="가입하기" class="btn btn-primary"></td>
+<td><button type="reset" > 취소하기 </button></td><!--미완 -->
+
+
+
+
+
+    </form>
+   
+
+
+</body>
+</html>

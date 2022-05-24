@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action ="join.jsp"> <!--method를지정하지않으면 기본적으로는 get으로 적용-->
+        ID &nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" name="userid"><br>
+        PW &nbsp;&nbsp;: <input type="password" name="pwd"><br>
+        Email : <input type="email"><br>
+        Gender :
+         <!--radio의 부분의 name(변수)이 동일해야한다-->
+        <input type="radio" name="gender" value="M">남&nbsp;
+          <!--"W" 뒤부분의 checked는 기본 상태로 여를 체크상태로 두겠다는의미-->
+        <input type="radio" name="gender" value="W" checked>여&nbsp;<br>
+        Hobby :
+        <input type="checkbox" name="Hobby1" value="reading">독서&nbsp;
+        <input type="checkbox" name="Hobby2" value="climing">등산&nbsp;
+        <input type="checkbox" name="Hobby3" value="golf">골프&nbsp;
+        <input type="checkbox" name="Hobby4" value="swimming">수영&nbsp;<br>
+        MEMO : <br>
+        <textarea rows="10" cols="50" name="memo"></textarea>
+        <br>
+        TEL : <br>
+        <select name="tel1">
+            <option value="053">053</option>
+            <option value="055">055</option>
+            <option value="052" selected>052</option>
+        </select>
+        -<input type="text" name="tel2" style="width:30px">
+        -<input type="text" name="tel3" style="width:30px">
+       
+
+        <br>
+        <input type="submit" value="가입하기">
+    </form>
+</body>
+</html>

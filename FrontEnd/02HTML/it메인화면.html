@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--CSS  부트 스트랩 사이트에서 복사해옴-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <!--script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+ 
+    <!--padding-bottom: 간격조정-->
+<style>
+   
+   
+  table {
+  
+    border: 1px solid #444444;
+  }
+  th, td {
+    border: 1px solid #444444;
+  }
+
+
+td{
+    padding-bottom: 10px;
+}
+</style>
+
+
+
+
+
+
+    <h1 align="center">코리아 아카데미 대구</h1>
+<table border="2" width="400px" height="100px" align="center">
+    
+    <!--border는 테두리 설정및 크기설정이다 
+        width는 너비 
+        height는높이
+        align는 table  배치형태 설정 -->
+   
+
+
+    <!--tr행-->
+        
+    <tr name="table1">
+       
+        <!--tr칸(열)-->
+       <td>행정</td>
+       <td>강사모드</td>
+       <td>훈련생</td>
+       <td>이수자평가</td>
+      
+       
+    </tr>
+    <!--t r행-->
+   
+<table>   
+
+
+
+   
+    <form action ="join.jsp"> <!--method를지정하지않으면 기본적으로는 get으로 적용-->
+        <!--02의 내용과 결과차이없어보이지만 열정리가 되있다는차이가있다. -->
+       <table align="center">
+          <tr>
+              <td width="50px">ID</td>
+              <td><input name="userid" class="form-control" placeholder="아이디를 입력하세요"></td>
+          </tr>
+          <tr>
+            <td >PW</td>
+            <td><input type="password " name="pwd" class="form-control" placeholder="패스워드를 입력하세요"></td>
+        </tr>
+        
+        <td><input type="submit" value="로그인" class="btn btn-primary"></td>
+        <td><button type="reset" > 취소하기 </button></td><!--미완 -->
+       </table>
+    
+     
+    </form>
+</body>
+</html>

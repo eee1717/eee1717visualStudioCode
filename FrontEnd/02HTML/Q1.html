@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>회원정보</h2> <hr><hr><br>
+   <table>
+       <tr>
+    <form action="" method="">
+        <fieldset style="width:600px ;">
+            <legend style="font-size: 32px;color: brown">인적사항</legend>
+        이름: <input>
+        주민번호: <input type="text" name="mannum1" style="width:30px"  class="form-control w-25">
+        -<input type="text" name="mannum2" style="width:30px"  class="form-control w-25"><br>
+        
+        국적: 
+         <select name="human" class="form-select w-25">
+            
+            <option value="외국인">외국인</option>
+            <option value="내국인" selected>내국인</option> 
+            
+        취득자격증:
+    </tr>
+    <tr>
+        <form action="" method="">
+            <fieldset style="width:600px ;">
+                <legend style="font-size: 32px;color: brown">성별&학년</legend>
+            성별: <input type="radio" name="gender" value="M" class="form-check-input">남&nbsp;
+            <input type="radio" name="gender" value="W" checked class="form-check-input">여&nbsp;</td><br>
+            학년:
+            <input type="radio" name="grade" value="grade1"  class="form-check-input">1학년&nbsp;</td>
+            <input type="radio" name="grade" value="grade2"  class="form-check-input">2학년&nbsp;</td>
+            <input type="radio" name="grade" value="grade3"  class="form-check-input">3학년&nbsp;</td>
+            <input type="radio" name="grade" value="grade4"  class="form-check-input">4학년&nbsp;</td>
+
+         
+
+
+            </tr>
+             <tr>
+            <form action="" method="">
+                <fieldset style="width:600px ;">
+                    <legend style="font-size: 32px;color: brown">취미</legend>
+               
+                    골프 <input type="checkbox" name="" value=""><!--취미 선택체크박스-->
+                수영 <input type="checkbox" name="" value="">
+                등산 <input type="checkbox" name="" value="">
+                여행 <input type="checkbox" name="" value="">
+                기타 <input type="checkbox" name="" value="">
+            </tr>
+        <tr>
+                <form action="" method="">
+                    <fieldset style="width:600px ;">
+                        <legend style="font-size: 32px;color: brown">메모사항</legend>
+                        <textarea rows="10" cols="50" name="memo" class="form-control" placeholder="원하시는 글을 남겨주세요"   ></textarea></td>
+                </tr>
+                </table>
+                <form action="" method="post" enctype="multipart/form-data">
+                    업로드1: <input type="file" name="upload"><br><hr>
+                  
+                    <input type="submit" value="저장하기"> 
+                    <input type="reset" value="취소하기">
+         
+             </form>
+</body>
+
+</html> 
