@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--글자크기 기본배율(100%)에 16px크기가 기본-->
+   
+    <!--절대크기-->
+    <div style="font-size:48px;">
+   <div style="font-size: 32px;">HELLO WORLD</div>
+   <div>HELLO WORLD</div>
+   <div style="font-size: 8px;">HELLO WORLD</div>
+   <div style="font-size: 16px;">HELLO WORLD</div>
+     </div>
+     <hr>
+<!--em : 상대크기(상위태그 글자크기 기준) 기본16px-->
+<div style="font-size: 2em;"> <!--2배수 3em으로하면 3배수-->
+    <div style="font-size: 1.5em;">HELLO WORLD</div>
+    <div>HELLO WORLD</div>
+    <div>HELLO WORLD</div>
+    <div style="font-size: 1em;">HELLO WORLD</div>
+</div>
+<hr>
+<!--rem : 상대크기 16px기준으로함-->
+<div style="font-size: 2rem;"> <!--2배수 3em으로하면 3배수-->
+    <div style="font-size: 1.5rem;">HELLO WORLD</div>
+    <div>HELLO WORLD</div>
+    <div style="font-size: 0.5rem;">HELLO WORLD</div>
+    <div style="font-size: 1rem;">HELLO WORLD</div>
+</div>
+<hr>
+<!--% :상대크기 상위div에서 지정한값을 기준으로 100%를잡는다 장점 상위div의 배율을높이면 하위도 같이 올라간다-->
+<div style="font-size: 200%;">
+    <div style="font-size: 100%;">HELLO WORLD</div>
+    <div style="font-size: 75%;">HELLO WORLD</div>
+    <div>HELLO WORLD</div>
+    <div>HELLO WORLD</div>
+</div>
+<hr>
+
+
+
+</body>
+</html>

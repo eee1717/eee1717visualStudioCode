@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+   
+    <div style="font-family:'돋움','궁서체','굴림체';">Hello World</div> <!--맨앞의폰트만적용됨 혹시 맨앞에있던폰트가 적용되지않는다면 2순위로 바로뒤에있는폰트가작동하도록하는것이다-->
+    <div style="font-family:'궁서체';">Hello World</div>
+    <div style="font-family:'굴림체';">Hello World</div>
+    <div style="font-family:'맑은고딕';">Hello World</div>
+    <div style="font-family:'바탕체';">Hello World</div>
+   
+<!--외부 폰트 적용-->
+<!--@font-face{}-->
+<style>
+    @font-face{
+        font-family:'Ghanachocolate' ;
+        src: url("font/Ghanachocolate.ttf");
+    }
+    div{
+        font-family: 'Ghanachocolate' ;
+    }
+</style>
+<div>가나초콜릿</div>
+<div>Hello world</div>
+<div>Hello world</div>
+<div>Hello world</div>
+
+</body>
+</html>

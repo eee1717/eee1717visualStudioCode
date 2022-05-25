@@ -23,6 +23,30 @@
     <div class="p-3 mb-2 bg-info text-dark"><h1>옥션 회원가입</h1></div>
     
     <style>
+    
+        ul{
+            /* border:1px solid black; */
+            list-style:none;
+            display:flex;
+            justify-content: space-evenly;
+            font-size:1.5em;
+        }
+        li{
+            color: red;
+        }
+    </style>
+
+    
+ <ul>
+        <li>회사소개</li>
+        <li>제품소개</li>
+        <li>커뮤니티</li>
+        <li>고객센터</li>
+        
+    </ul>
+
+
+    <style>
    
         td{
             padding-bottom: 10px;
@@ -38,11 +62,11 @@
         <table>
             <tr>
                 <td width="50px">ID</td>
-                <td><input name="userid"class="form-control" placeholder="아이디를 입력하세요"></td>
+                <td><input name="userid"class="form-control" pattern="(?=.*[a-z,A-Z])(?=.*[0-9]).{4,16}" placeholder="아이디를 입력하세요(소문자또는영문자와 숫자의합이4자이상16자리이하의값을넣어야 정상작동)"></td>
             </tr>
             <tr>
               <td >PW</td>
-              <td><input type="password" name="pwd" class="form-control" placeholder="PW를 입력하세요"></td>
+              <td><input type="password" name="pwd" class="form-control" pattern="(?=.*[a-z,A-Z])(?=.*[0-9]).{4,16}"  placeholder="PW를 입력하세요(영소문자and숫자4자이상16자이하"></td>
           </tr>
           <tr>
               <td >Email</td>
@@ -103,7 +127,7 @@
   
 
 <td><input type="submit" value="가입하기" class="btn btn-primary"></td>
-<td><button type="reset" > 취소하기 </button></td><!--미완 -->
+<td><button type="reset" class="btn btn-secondary" > 취소하기 </button></td><!--미완 -->
 
 
 

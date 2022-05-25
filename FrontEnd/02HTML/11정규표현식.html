@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="test.jsp" method="get">
+        <!--
+            ?=전방탐색
+            ?=이후에 오는 문자열을 탐색한다
+            .*[a-z] :a-z까지의 모든경우의 수 a,ab,abc등등등 
+
+            ?=.*[a-z] : 잎에오는 문자가 a-z 까지의 모든경우의 수 a,ab,abc등등 인지 확인 탐색의기능이다 설정한 문자가 텍스트안에 있기만하면된다.
+        -->
+        TEST영문자 = <input name="test1" pattern="(?=.*[a-z]).{8,16}"><br>
+
+        TEST영문자or숫자 = <input  name="test2" pattern="(?=.*[a-z,0-9]).{8,16}"><br>
+
+        TEST영문자or숫자or대문자 = <input  name="test3" pattern="(?=.*[a-z,A-Z,0-9]).{8,16}"><br>
+
+        TEST영문자or숫자or대문자or특수문자 = <input  name="test4" pattern="(?=.*[a-z,A-Z,0-9,!@#$%^&*()_-+=[]{}~?:;`|/]]).{8,16}"><br>
+       
+       <!-- ^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,1}$"-->
+
+        TEST영문자and숫자 = <input  pattern="(?=.*[a-z])(?=.*[0-9]).{1,8}"><br>  <!--영소문자와 숫자가 각각 최소 1개이상~8개이하 가 있어야한다.-->
+        TEST영문자and숫자and특수문자= <input  pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()]).{1,8}"><br>  
+        <!--특수문자 전부 하면 작동제대로안함 왜안되는지 알아내야함-->
+
+        <input type="submit">
+    </form>
+</body>
+</html>

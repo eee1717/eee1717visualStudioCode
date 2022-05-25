@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--inline  우선순위가 제일높음,단일태그만 적용-->
+     <h1 style="color: blueviolet;background-color: beige;">제목1</h1>
+
+    <!--style태그 를이용해서 여러태그를 지정-->
+    <style>
+      h1{
+          color: black;
+          background-color: aquamarine;
+      }
+
+    </style>
+    <h1>제목1</h1>
+    <!--외부 link  css파일에있는 test.css의 내용물을 불러옴  style태그와 link로불러온 style태그가 같은종류의코드라면  코드가 나중에 적혀진 쪽을 인식한다. -->
+    <link rel="stylesheet" type="text/css" href="css/test.css">
+    <h1>제목1</h1>
+     
+
+
+
+
+
+</body>
+</html>
