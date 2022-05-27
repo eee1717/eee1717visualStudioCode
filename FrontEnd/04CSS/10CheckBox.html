@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<style>
+    input[type='checkbox']{
+        border: 5px solid gray;
+        background-color: aqua;
+    }
+    /* input[type='checkbox']+label{
+        display: block;
+        width: 50px;
+        height: 50px;
+        border: 2px solid darkgray;
+    } */
+          /* inline형은 상하조절불가  */
+    input[type='checkbox']+label{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border: 2px solid darkgray;
+    }
+
+    input[type='checkbox']:checked +label{
+        /* background-color: black; */
+        background :url("apple.svg") ;
+        background-size: 100%;
+    }
+</style>
+
+<div style="display: flex">
+    <input id="chk" type="checkbox">
+    <!-- label을 클릭해도 chk와 같은 효과 -->
+    <label for="chk">TEST</label>&nbsp;
+         <span style="display:block;line-height:50px">여자</span>
+        </div>
+        <div style="display: flex">
+            <input id="chk" type="checkbox">
+            <!-- label을 클릭해도 chk와 같은 효과 -->
+            <label for="chk">TEST</label>&nbsp;
+                 <span style="display:block;line-height:50px">중성</span>
+                </div>
+   <div style="display: flex">
+    <input id="chk" type="checkbox">
+    <!-- label을 클릭해도 chk와 같은 효과 -->
+    <label for="chk">TEST</label>&nbsp;
+         <span style="display:block;line-height:50px">남자</span>
+        </div>
+</body>
+</html>

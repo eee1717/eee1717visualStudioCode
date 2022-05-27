@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style type="text/css">
+    /* 전체영역에서 여백을 없애줌 */
+    * {
+    margin: 0;
+    padding: 0;
+    }
+    /* ul li태그에 리스트 스타일을 없앰 */
+    ul li{
+    list-style: none;
+    }
+    /* a태그에 텍스트 밑줄을 없애고 색상을 #333 */
+    
+    a {
+    text-decoration: none;
+    color:#333;
+    }
+    
+    /* 글자크기를 16px 맑은 고딕 굵게하고 width넓이 700, 높이 50만큼 배경색은 #ccc, 글자색은 검정색, 라인높이50px
+    
+    menu박스 가운데정렬, 글자가운데 정렬 */
+    
+    #menu {
+    font:bold 16px "malgun gothic";
+    width:700px;
+    height:50px;
+    background: #ccc;
+    color:black;
+    line-height: 50px;
+    margin:0 auto;
+    text-align: center;
+    border: 1px solid rgb(225, 240, 23);
+    }
+    
+    /* menu태그 자식의 ul의 자식 li를 왼쪽정렬과 넓이 140설정 */
+    
+    #menu > ul > li {
+    float:left;
+    width:140px;
+    position:relative;
+    border: 1px solid blue;
+    }
+    
+    #menu > ul > li > ul {
+    width:130px;
+    display:none;
+    position: absolute;
+    font-size:14px;
+    background: skyblue;
+    }
+    
+    #menu > ul > li:hover > ul {  display:block; }
+    
+    /* 서브메뉴 가까이갈시 작동하는것들 */
+    #menu > ul > li > ul > li:hover {
+    background: orange;
+    transition: ease 1s;
+
+    border: 1px solid red;
+    }
+    
+    table{
+        border: 1px solid black;
+        width: 50%;
+        height: 550px;
+        margin: 100px auto;
+        background-color: skyblue;
+    }
+    td{
+        border: 10px solid rgb(255, 255, 255);
+        
+     
+    }
+  
+
+h3{
+
+}
+
+
+
+    </style>
+
+<body>
+   <a href="https://www.netmarble.net/" target="_blank"><h3><img src="oldnetmarbleLogo.jpg" width="150px" height="100px"></h3> </a> 
+    <div id="menu">
+        <ul>
+        <li><a href="#">회사소개</a>
+        <ul>
+        <li><a href="#">SUB_MENU</a></li>
+        <li><a href="#">SUB_MENU2</a></li>
+        <li><a href="#">SUB_MENU3</a></li>
+        </ul>
+        </li>
+        
+        <li><a href="#">예약하기</a>
+        <ul>
+        <li><a href="#">SUB_MENU</a></li>
+        <li><a href="#">SUB_MENU2</a></li>
+        <li><a href="#">SUB_MENU3</a></li>
+        </ul>
+        
+        </li>
+        <li><a href="https:\\nate.com" target="_blank">사이트설명</a>
+        
+        
+        
+        </li>
+        
+        <li><a href="#">고객센터</a>
+        <ul>
+        <li><a href="https:\\www.naver.com" target="_blank">문의사항</a></li>
+
+      
+
+        <li><a href="https:\\www.google.com" target="_blank">Q&A</a></li>
+        <li><a href="https:\\www.daum.net" target="_blank">리뷰후기</a></li>
+        </ul>
+        
+        </li>
+     
+           </ul>
+     </div><br>
+
+
+   
+     <table>
+         <tr>
+             <td colspan="3">1  <img src="car1.jpg" width="100%" height="100%"> </td>
+             <!-- <td>2</td>
+             <td>3</td> -->
+         </tr>
+        
+        
+        
+         <tr>
+            <!-- <td>4</td> -->
+            <td colspan="3">5 
+                <div style="text-align: center;">
+                <a href="https://google.com"> <button >예약</button> </a>
+               </div>
+            </td>
+            <!-- <td>6</td> -->
+        </tr>
+        <tr>
+            <td colspan="3">7<a href="https://google.com"><img src="11.jpg" width="100%" height="100%"> </a></td>
+            <!-- <td>8</td>
+            <td>9</td> -->
+        </tr>
+     </table>
+
+
+
+
+</body>
+</html>

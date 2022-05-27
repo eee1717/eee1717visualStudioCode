@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+ 
+        a{
+            /* a가 line형이기때문에 block형으로 바꾸어서 상하좌우 변경이가능하도록한것. */
+            display: block;
+            width: 80px;
+            height: 30px;
+            background-color: bisque;
+            color: black;
+            /* text-decoration:  none; */
+            text-align: center;
+            line-height: 30px
+               
+            
+        }
+        
+        /* 의사선택자 */
+        
+        
+        /* 가까이가면 색깔이 바뀜 */
+        a:hover{
+            color: red;
+        }
+        
+        /* 작동제대로안됨 */
+        a:visited {
+           background-color:  rgb(217, 112, 231);
+        }
+        
+        /* 클릭하면 작동 */
+        a:active{
+            color: yellow;
+        }
+        
+        #txt{
+            border: 1px dashed lightblue;
+        }
+        /*  클릭하면 테두리색깔이바뀜 */
+        #txt:focus{
+            border: 0px; 
+            outline: 3px dashed orange;
+         
+        }
+
+        button:link{
+               background-color: rgb(97, 200, 226);
+              } 
+             
+
+           input:checked + span{
+             outline: yellow;
+             background-color: green;
+           }
+               
+           input[type="checkbox"]{
+               outline: 3px solid blue;
+
+           }
+        </style>
+        
+        
+        <a href="#" id="d">TEST1</a> 
+        <a href="#" id="d">TEST2</a> 
+        <input id="txt" type="text"><br>
+        <button>TEST</button><br>
+
+        <div id="chk">
+        <input type="checkbox" > <span>체크박스</span>
+        </div>
+</body>
+</html>

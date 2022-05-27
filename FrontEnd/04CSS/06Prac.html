@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- class,자식,자손선택자만 이용해서 화면을 바꾸기 -->
+<style>
+
+.c1>li{
+color: rgb(144, 17, 228);
+background-color: antiquewhite;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.c1 ol{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.c2{
+    background-color: rgb(157, 221, 200);
+    color: rgb(88, 66, 148);
+}
+</style>
+
+
+
+
+    <ol type="A" class="c1">
+    <li >프로야구</li>
+    <ol class="c2">
+        <li>두산 베이스</li>
+        <li>LG 트윈스</li>
+        <li>롯데 자이언트</li>
+
+    </ol> 
+      <li>프로농구</li>
+      <ol class="c2">
+        <li>전북 현대</li>
+        <li>FC 서울</li>
+        <li>인천 유나이티드</li>
+      </ol>
+
+      <li>프로축구</li>
+      <ol class="c2">
+        <li>인천 전자랜드</li>
+        <li>전주 KCC</li>
+        <li>서울 SK</li>
+      </ol>
+    </ol>
+</body>
+</html>

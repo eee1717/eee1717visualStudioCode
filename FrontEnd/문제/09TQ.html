@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<style>
+    table{
+        border:  1px solid gray;
+        width:  800px;
+        height: 300px;
+        margin: 100px auto;
+      
+        border-collapse: collapse ;
+    
+    }
+    tr{
+        border:  1px solid gray;
+        background-color: rgb(207, 194, 207);
+    
+    }
+    td:nth-child(2n){
+        border:  1px solid gray;
+        background-color: white;
+       
+    }
+    button{
+        
+    }
+</style>
+
+<h2 >비밀번호 찾기</h1>
+
+<table>
+    <tr>
+        <td>1 웹아이디</td>
+        <td colspan="3">2 <input name="" placeholder="아이디" class="form-control" style="border-radius:0px; border:0px; border-bottom:1px solid lightgray;"></td>
+        <!-- <td>3</td>
+        <td>4</td> -->
+    </tr>
+    <tr>
+        <td>5 생년월일</td>
+        <td >6  연락처 
+             <select  multiple cursors  >
+            <option value="053">053</option >
+            <option value="055">055</option>
+            <option value="051">051</option>
+            <option value="052">052</option>
+            <option value="057">057</option>
+            <option value="058">058</option>
+            <option value="059">059</option>
+            <option value="02" selected>02</option>
+        </select>
+        -<input type="text" name="tel2" style="width:30px">
+        -<input type="text" name="tel3" style="width:30px"></td>
+        <td>7 성별</td>
+        <td>8     <input type="radio" name="gender" value="M">남&nbsp;
+            <input type="radio" name="gender" value="W"  checked>여<br></td>
+    </tr>
+    <tr>
+        <td>9 전송방법</td>
+        <td colspan="3">10   <input type="radio" name="" value="">이메일&nbsp;
+            <input type="radio" name="" value=""  checked>휴대전화</td>
+        <!-- <td>11</td>
+        <td>12</td> -->
+    </tr>
+    <tr>
+        <td>13 가입시 이메일</td>
+        <td colspan="3">14 <input type="text" style="width:80px">@ <input type="text2" style="width:80px"></td>
+        <!-- <td>15</td>
+        <td>16</td> -->
+    </tr>
+    <tr>
+        <td>17 가입시 휴대전화</td>
+        <td colspan="3">18
+            <!-- 만들어야는거까먹음 -->
+             <select  > 
+            
+            <option value="053" >053</option>
+            <option value="055">055</option>
+            <option value="02" selected>02</option>
+        </select>
+        -<input type="text" name="tel2" style="width:30px">
+        -<input type="text" name="tel3" style="width:30px"></td></td>
+        <!-- <td>19</td>
+        <td>20</td> -->
+    </tr>
+</table>
+   <div style="text-align: center;">
+    <button >확인</button>
+</div>
+</body>
+</html>
