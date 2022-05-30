@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+       <!-- positon : 박스의 위치를 지정
+    static(기본) : viewport의 순서대로 박스를연결 
+    relative : 특정HTML요소를 기본위치로 잡고 그위치를 기준으로 현재박스 위치를 지정(상대위치)
+    absolute : 특정HTML요소를 기본위치로 잡고 그위치를 기준으로 현재박스 위치를 지정 (절대위치)
+    fixed : viewport 를 기준으로 위치를지정-->
+    <style>
+        body{
+            margin: 0px; /* 웹페이지가 기본상태일때 살짝떨어져있는 부분을 제거하기위한것이다. */
+        }
+        div{
+            width: 200px;
+            height: 150px;
+            border: 2px solid blueviolet;
+        }
+      #b1{
+          position: absolute;
+          left: 20px;
+          top:  20px;
+      }
+      #b2{
+          position: absolute;
+          left: 30%;
+          top:  30%;
+      }
+      #b3{
+          position: absolute;
+          left: 150px;
+          top:  150px;
+      }
+      #b4{
+          position: absolute;
+          left: 200px;
+          top:  200px;
+      }
+    </style> 
+
+
+  <div style="border: 3px solid yellow; position:relative; top:100px; left: 100px; ">
+   <div id="b1">1</div>
+   <div id="b2">2</div>
+   <div id="b3">3</div>
+   <div id="b4">4</div>
+   <div id="b5">5</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        body{
+            
+        }
+        .menu-level1{
+            border: 1px solid gold;
+            padding: 0px;
+            list-style: none;  /* 맨앞의 기호나 표시 없애기 */
+            display: flex;
+            flex-direction:  row;
+            justify-content: space-between; /* menu-level1 좌표변경 */
+            background-color: aquamarine;
+            height: 40px;
+            line-height: 40px;
+            text-align: center; /* 문자의 틀내에서 center로이동 */
+            position: relative;
+            left: 0px;
+            top: 0px;
+          
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+         .menu-level1>li{
+             border: 1px solid red;
+             width: 100px;           /* menu1 1개가 차지하는 넓이 */
+         } 
+         .menu-level2{
+           border: 1px solid green;
+           padding: 0px; /*  기본적으로 띄워져있는부분 제거*/
+           list-style: none;
+           display: none;  /*  menu를 가까이대기전까지는 sub메뉴가안보여야함 가져다대기전까지 sub가없는것이다.
+           /* visibility: hidden; 이것은 sub메뉴가있는데 안보여주는것이다  */
+           position:absolute;
+           left: 0px;
+           top:  40px;  /* menu-level1을 기준으로 되어있기때문에 위치가 메뉴의 자리부분과 겹치기때문에 좌표를  밑으로낮춰서 submenu를 내려줘야한다 */
+           
+         }
+   
+   
+         /* menu-level1에 hover(마우스커서를 근처로이동시키다)할시 menu-level2를 보이게한다. */
+         .menu-level1>li:hover .menu-level2{
+                  display: flex; /* 가로배치*/
+                  justify-content: space-around;
+                  justify-items: center;
+                  width: 100%;
+                 
+         }
+   /* .은 class관련 #은 id 관련 이다 */
+   </style>
+   
+   
+       <ul class="menu-level1">
+            <li> 
+                <a href="#"> menu1</a>
+                <ul class="menu-level2">
+                    <li><a href="#">submenu11</a></li>
+                    <li><a href="#">submenu2</a></li>
+                    <li><a href="#">submenu3</a></li>
+                    <li><a href="#">submenu4</a></li>
+              
+
+                </ul>
+           </li>
+           <li> 
+            <a href="#"> menu2</a>
+            <ul class="menu-level2">
+                <li><a href="#">submenu12</a></li>
+                <li><a href="#">submenu2</a></li>
+                <li><a href="#">submenu3</a></li>
+                <li><a href="#">submenu4</a></li>
+            </ul>
+       </li>  
+       <li> 
+        <a href="#"> menu3</a>
+        <ul class="menu-level2">
+            <li><a href="#">submenu13</a></li>
+            <li><a href="#">submenu2</a></li>
+            <li><a href="#">submenu3</a></li>
+            <li><a href="#">submenu4</a></li>
+        </ul>
+       </li>   
+          
+       <li> 
+        <a href="#"> menu4</a>
+        <ul class="menu-level2">
+            <li><a href="#">submenu14</a></li>
+            <li><a href="#">submenu2</a></li>
+            <li><a href="#">submenu3</a></li>
+            <li><a href="#">submenu4</a></li>
+        </ul>
+   </li>  
+       </ul>
+
+</body>
+</html>
