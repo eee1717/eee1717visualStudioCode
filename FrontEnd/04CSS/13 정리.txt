@@ -1,0 +1,23 @@
+1 기본선택자
+html요소/id/class/그룹
+
+2 결합선택자
+자식선택자(.c1 > p)
+자손선택자(.c1 p)
+
+3 동위선택자
+일반 : ~	밑에 모두
+인접 : +	밑에 하나
+
+4 의사선택자
+-동적
+:hover :active :focus :visited
+-상태
+:disabled :enabled :checked
+-구조
+:first-child :last-child :nth-child
+
+
+
+
+

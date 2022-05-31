@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<style>
+  *{
+      font-weight:700;
+      font-size: 25px;
+      text-align:center;
+  }
+
+ 
+
+
+  #topmenu{
+      border: 1px solid gold;
+      display: flex;
+      justify-content:space-around;
+      align-content: center;
+      margin-left: 10%;
+      width: 100%; /* 100%로해주어야지 지정된부분 전부를차지한다. */
+      padding: 0px;
+      margin: 0px;
+       
+     
+  }
+  
+  body{
+            margin:0px;
+      }
+
+       
+  .menu1{
+    width: 100%;
+    border: 1px solid #001aff;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+          
+  } 
+
+  a{
+            text-decoration: none;
+            color:rgb(0, 0, 0);
+
+        } /* a안의 문자들의 줄표시제거및 색깔결정 */
+
+ ul{
+       border: 1px  solid rgb(125, 116, 241);
+        padding: 0px;
+        margin: 0px;
+   }
+  
+   .menu2{
+    border: 1px solid  red;
+    display: none;
+   
+  
+    
+   }
+   
+ 
+
+
+   li{
+    list-style: none;
+    border: 1px solid greenyellow;
+     margin-left: 40px;
+     
+   
+   }
+p{
+    border-top: 3px solid palevioletred;
+    border-bottom: 3px solid palevioletred;
+    height: 100px;
+}
+
+ul>li:hover{
+    border-bottom:3px solid rgb(30, 30, 189);
+            height:100px;   /* 지정된위치가 가까이가면 늘어남  */
+}
+
+.menu1>li:hover .menu2{
+            display:flex;
+            align-items: center;  
+           
+         
+            
+        }
+.menu3{
+    background-color:  gray;
+    text-align:center;
+}
+.btn{
+    margin-left: 100px ;
+}
+
+.paper{
+    
+    
+}
+
+</style>
+
+ <div id="wrapper">
+    <div id="topmenu">
+        
+      <!-- NAV 메뉴 시작 -->
+     <ul class="menu1">
+      
+         <!-- item1 -->
+         <!--로고-->
+         <li id="logo"><img src="http://gogorentcar.com/tpl/des/images/des/logo.png"></li>
+        <li>
+            <a  href="#">차종요금</a>
+            <div class="menu2">
+                <ul class="menu3">      
+                 <li>단기대여</li>
+                 <li>월대여</li>
+                 <li>장기대여</li>
+               </ul>
+            </div>
+        </li>  
+        <!-- item2 -->
+        <li>
+            <a href=#>이용방법</a> 
+            <div class="menu2"> 
+             <ul>   
+               <li class="menu3">단기대여안내</li>
+               <li  class="menu3">월대여안내</li>
+               <li  class="menu3">장기대여안내</li>
+             </ul>
+            </div>
+        </li>
+        <!-- item3 -->
+        <li>
+            <a href=#>회사소개</a> 
+            <div class="menu2"> 
+              <ul>         
+                 <li>회사소개</li>
+                 <li>지점안내</li>
+                 <li>가맹점모집</li>
+               </ul>
+            </div>
+        </li>
+        <!-- item4 -->
+        <li>
+            <a href=#>고객문의</a> 
+           <div class="menu2"> 
+             <ul>
+               <li>문의사항</li>
+               <li>보험종류</li>
+             </ul>
+          </div>
+        </li>
+     </ul><!--allmenu-->
+     <!-- 네비게이션바 끝 -->
+     <button class="btn">고객전화1557-1111</button>
+    
+  </div><!--topmenu-->
+  
+</div><!--wrapper-->
+
+<p>&nbsp;</p> <!--칸띄우기용도-->
+<div class="paper">
+    <img src="http://gogorentcar.com/tpl/des/images/des/main_slide1.jpg">
+</div>
+
+
+
+</body>
+</html>
