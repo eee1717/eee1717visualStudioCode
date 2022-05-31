@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <style>
+        body{
+         
+        }
+        #test{
+            width:400%;
+            border : 5px solid red;
+            position:relative;
+            left:0px;
+            top:0px;
+            margin:0px;
+            overflow:hidden;
+            height:500px;
+        }
+        #s1{
+            position:absolute;
+            left:100%;
+            top:0px;
+            width:100%;
+            height:500px;
+            background-color:antiquewhite;
+           
+
+        }
+        #s2{
+            position:absolute;
+            left:100%;
+            top:0px;
+            width:100%;
+            height:500px;
+            background-color:rgb(109, 209, 83);
+            border:1px solid gray;
+        }
+        #s3{
+            position:absolute;
+            left:100%;
+            top:0px;
+            width:100%;
+            height:500px;
+            background-color:rgb(75, 162, 199);
+            border:1px solid gray;
+        }
+        #s4{
+            position:absolute;
+            left:100%;
+            top:0px;
+            width:100%;
+            height:500px;
+            background-color:rgb(167, 75, 139);
+            border:1px solid gray;
+        }
+        /* 오른->왼쪽 */
+        @keyframes slide-in{
+            from{left:0%;}
+            to{left:-100%;}
+
+        }
+        /* 오른->왼 */
+        @keyframes slide-out{
+           from{left:0%;}
+           to{left:100%;}
+
+        }
+    </style>
+
+        <div id="test">
+            <div id="s1" class="slider">1</div> 
+            <div id="s2"class="slider">2</div>
+            <div id="s3"class="slider">3</div>
+            <div id="s4" class="slider">4</div>
+        </div>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    
+    <script>    
+      
+
+    //   $('#test').css('left','-100%').css('transition','1s');
+
+    //   $('#test').css('left','-200%').css('transition','1s');
+        //    setInterval(function(){
+        //        $('.slider').css('animation-name','slide-in').css('animation-delay','2s');
+        //    },2000)
+       
+        
+            // $('#s1').css('animation','slide-in 1s ease').css('animation-delay','1s');
+            // $('#s2').css('animation','slide-in 1s ease').css('animation-delay','2s');
+            // $('#s3').css('animation','slide-in 1s ease').css('animation-delay','3s');
+            // $('#s4').css('animation','slide-in 1s ease').css('animation-delay','4s'); 
+       
+
+    </script>
+  
+</body>
+</html>
