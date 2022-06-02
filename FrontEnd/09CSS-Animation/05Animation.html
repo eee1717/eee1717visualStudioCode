@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        div{
+            background-color:orange;
+            height:50px;
+            width:100px;
+            margin:10px;
+            position:relative;
+            left:0px;
+            top:0px;
+        }
+        @keyframes moving{
+            from{left:0px;}
+            to{left:1000px;}
+        }
+        #d1{
+            animation-name:moving;animation-duration: 10s;
+            /* 처음부터 끝까지 같은 속도  */
+            animation-timing-function: linear;
+        }
+        #d2{
+            animation-name:moving;animation-duration: 10s;
+            /* 기본값,천천-빠름-천천 */
+            animation-timing-function: ease;
+        }
+        #d3{animation-name:moving;animation-duration: 10s;
+            /* 천천-보통 */
+            animation-timing-function: ease-in;
+        }
+        #d4{animation-name:moving;animation-duration: 10s;
+            /* 보통-천천 */
+            animation-timing-function: ease-out;
+        }
+        #d5{
+            animation-name:moving;animation-duration: 10s;
+            /* 천천-보통-천천 */
+            /* animation-timing-function: ease-in-out; */
+
+            /* 끊어서 */
+            /* animation-timing-function:steps(10); */
+
+            /* 사용자정의  */
+            animation-timing-function:cubic-bezier(0.01, 0.1, 0.01, 1);
+        }
+    </style>
+
+    <div id="d1"></div>
+    <div id="d2"></div>
+     <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div{
+            border : 1px solid gray;
+            width:500px;
+            height:300px;
+            margin:50px;
+        }
+        @keyframes moving1{
+            0%{background-color:red;}
+            20%{background-color:orange;}
+            40%{background-color:yellow;}
+            60%{background-color:green;}
+            80%{background-color:blue;}
+            100%{background-color:darkblue;}
+        }
+        #d1{
+            animation-name: moving1;
+            /* 적용시간 */
+            animation-duration: 10s;
+            /* 무한반복 */
+            animation-iteration-count: infinite;
+        }
+        @keyframes moving2{
+            0%{background-color:red; transform:rotate(0deg);
+            
+            }
+            20%{background-color:orange;}
+            40%{background-color:yellow; transform:rotate(90deg);
+                
+            }
+            60%{background-color:green;}
+            80%{background-color:blue;}
+            100%{background-color:darkblue; transform:rotate(180deg);}
+        }
+        #d2{
+            animation-name: moving2;
+            /* 적용시간 */
+            animation-duration: 5s;
+            /* 무한반복 */
+            animation-iteration-count: infinite;
+            /* 타이밍지정 */
+            animation-timing-function:linear;
+        }
+    </style>
+
+    <div id="d1"></div>
+    <div id="d2"></div>
+</body>
+</html>

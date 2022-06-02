@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Object Type
+        
+        let dog1={ 
+            // 속성
+            name:'해피',
+            age : 3,
+            kind : '포메라니안',
+            showinfo:function(){
+                alert('이름 : '+this.name+'\n나이 : ' + this.age+'\n견종 : ' + this.kind);     
+            }
+        }
+        document.write(typeof dog1+"<br>");
+        document.write('이름 : ' + dog1.name+"<br>");
+        document.write('나이 : ' + dog1.age+"<br>");
+        document.write('종류 : ' + dog1.kind+"<br>");
+        // dog1.showinfo();
+
+        // 문제
+        // 다음과 같은 객체를 만들고 출력해봅니다
+        // 객체명 : car1
+        // 속성,속성값 
+        // owner:'홍길동',speed:10,fuel:100;
+        // 객체명 : customer1
+        // 속성, 속성값
+        // name:'홍길동',age:30,phone:'010-222',addr:'대구광역시 ~';
+
+        //car1,customer1 각각에 showinfo()함수를 만들고 alert을 통해 속성을 출력하세요
+        //button car1, button customer1 을 만들어서 클릭했을때
+        //각객체의 showinfo()를 사용할수 있도록 설정하세요
+        let car1={
+            owner : '홍길동',
+            speed : 10,
+            fuel : 100,
+            showinfo : function(){
+                alert(this.owner+" "+this.speed+" "+this.fuel);
+            }
+        }
+    </script>
+    
+    <button onclick="dog1.showinfo()">Dog1</button>
+    <button onclick="car1.showinfo()">Car1</button>
+</body>
+</html>
