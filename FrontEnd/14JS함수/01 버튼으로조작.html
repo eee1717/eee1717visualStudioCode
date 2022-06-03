@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    #d1{width: 50px; height: 50px; background-color: gold;}
+
+</style>
+
+
+    <button onclick="func1()">orange</button>
+    <button  onclick="func2()">gray</button>
+    <button  onclick="func3()">moving</button>
+    <button  onclick="func4()">back</button>
+    <button  onclick="func5()">init</button>
+    <button onclick="func6()">up</button>
+    <button  onclick="func7()">down</button>
+    <button onclick="func8()">right</button>
+    <button  onclick="func9()">left</button>
+    <hr>
+
+    <div id="d1"></div>
+<!-- 자바스크립트는 반환자료형을 넣지않는다. -->
+<script>
+
+ function func1(){
+     //d1태그의 백그라운드 Orange ;
+     d1tg=document.getElementById("d1");
+     d1tg.style.backgroundColor='orange';
+ }
+ function func2(){
+     //d1태그의 백그라운드 gray;
+     d1tg=document.getElementById("d1");
+     d1tg.style.backgroundColor='gray';
+ }
+
+
+let xpos=0;
+let ypos=0;
+let deg=0;
+
+ function func3(){
+     //d1태그의 클릭할때마다이동  깃허브참고;
+     d1tg=document.getElementById("d1");
+     d1tg.style.transform='translate('+(xpos+=100)+'px,'+(ypos+=100)+'px) rotate('+(deg+=180)+'deg)' ;
+     d1tg.style.transition='1s';
+     //추가한것은 깃허브참고 
+ }
+
+ //back 예전위치 
+ function func4(){
+    //back 예전위치 
+     d1tg=document.getElementById("d1");
+     d1tg.style.transform='translate('+(xpos-=100)+'px,'+(ypos-=100)+'px) rotate('+(deg-=180)+'deg)' ;
+     d1tg.style.transition='1s';
+     //추가한것은 깃허브참고 
+ }
+
+ function func5(){
+     //처음위치
+     d1tg=document.getElementById("d1");
+     d1tg.style.transform='translate('+(xpos=0)+'px,'+(ypos=0)+'px) rotate('+(deg=0)+'deg)'
+     d1tg.style.transition='1s';
+     
+ }
+ function func6(){
+     //위로이동
+     d1tg=document.getElementById("d1");
+     d1tg.style.transform='translate('+(xpos-=0)+'px,'+(ypos-=100)+'px) rotate('+(deg+=0)+'deg)'
+     d1tg.style.transition='1s';
+     //추가한것은 깃허브참고 
+ }
+ function func7(){
+     //아래이동
+     d1tg=document.getElementById("d1");
+     d1tg.style.transform='translate('+(xpos+=0)+'px,'+(ypos+=100)+'px) rotate('+(deg+=0)+'deg)'
+     d1tg.style.transition='1s';
+     //추가한것은 깃허브참고 
+ }
+ function func8(){
+     //오른쪽이동
+     d1tg=document.getElementById("d1");
+     d1tg.style.transform='translate('+(xpos+=100)+'px,'+(ypos+=0)+'px) rotate('+(deg+=0)+'deg)'
+     d1tg.style.transition='1s';
+     //추가한것은 깃허브참고 
+ }
+ function func9(){
+     //왼쪽이동
+     d1tg=document.getElementById("d1");
+     d1tg.style.transform='translate('+(xpos-=100)+'px,'+(ypos+=0)+'px) rotate('+(deg+=0)+'deg)'
+     d1tg.style.transition='1s';
+     //추가한것은 깃허브참고 
+ }
+ 
+
+
+</script>
+
+</body>
+</html>

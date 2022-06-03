@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<style>
+    tr{width: 100px;height: 50px; background-color: rgb(179, 179, 245);}
+    td{width: 100px;height: 10px; }
+</style>
+
+
+
+    <script>
+           
+//구구단2단~9단 table로 출력
+
+let dan = prompt("<tr> 단수 : ");
+let num = prompt("<td> 어디까지: ");
+
+  document.write("<table border>");
+    
+    for(let i=2;i<=dan;i++){ 
+        document.write("<tr>");
+            document.write("<th>");
+            document.write(i+"단");
+            document.write("</th>");
+         for(let j=1;j<=num;j++){
+           document.write("<td>"+i+"x"+j);
+            document.write("="+ i*j );
+           document.write("</td>");
+          
+            }
+           
+            document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+
+    </script>
+
+
+</body>
+</html>

@@ -14,5 +14,36 @@
         해당 행렬만큼의 테이블을 만들어봅니다.
      -->
     
+<style>
+    tr{background-color: aqua;
+    width: 100px;
+    height: 100px;}
+    td{background-color: aqua;
+    width: 100px;
+    height: 100px;}
+</style>
+
+
+
+<script>
+
+let lv1 = prompt("<tr> : ");
+let lv2 = prompt("<td> : ");
+let cnt=0;
+  document.write("<table border>");
+    
+    for(let i=0;i<lv1;i++){ 
+        document.write("<tr>");
+         for(let i=0;i<lv2;i++){
+           document.write("<td> "+(++cnt) +" </td>")
+            }
+            document.write("</tr>");
+    }
+
+    document.write("</table>");
+
+</script>
+
+
 </body>
 </html>

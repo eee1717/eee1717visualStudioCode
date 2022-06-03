@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ball
+        {
+            width: 100px;
+            height: 100px;
+            border: 3px solid black;
+            border-radius: 50%;
+            left: 0px;
+            top: 0px;
+            position:absolute; /* 이걸하지않으면 작동안함*/
+            animation-name:moving;
+            animation-duration: 3s;
+            
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+/* 
+            animation-name: moving ;
+            animation-duration: 3s;
+            animation-direction:alternate ;
+            animation-iteration-count: infinite; */
+            
+        }  /*작동안됨 왜인지모르겠다 */
+
+        @keyframes moving{
+            0%{left:0px;top:0px;animation-timing-function:ease-in;background-color: red;}
+            25%{left:0px;top:500px;animation-timing-function:ease-out;background-color: rgb(253, 122, 0);}
+            50%{left:0px;top:150px;animation-timing-function:ease-in;background-color: rgb(186, 238, 0);}
+            75%{left:0px;top:500px;animation-timing-function:ease-out;background-color: rgb(0, 255, 21);}
+            100%{left:0px;top:0px;animation-timing-function:ease-in;background-color: rgb(111, 0, 255);}
+
+        }
+     
+        </style>
+</head>
+<body>
+
+
+<button onclick="START()">START</button>
+<button onclick="STOP()">STOP</button> 
+<hr>
+
+
+<div id=ball> </div>
+
+<script>
+    ball=document.getElementById("ball");
+  function START(){
+          ball.style.animationPlayState="running";
+          ball.style.animationName='moving';
+          ball.style.animationDuration='3s';
+          ball.style.animationDirection='alternate';
+          ball.style.animationIterationCount='infinite';
+
+  }
+  function STOP(){
+    // animation-play-state:paused;
+    ball.style.animationPlayState="paused";
+  }
+</script>
+
+
+</body>
+</html>

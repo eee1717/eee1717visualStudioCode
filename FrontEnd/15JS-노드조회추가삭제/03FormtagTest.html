@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<style>
+ul{ 
+    list-style: none;
+    padding-left: 0px;
+}
+#cat-outer{
+    width: 100%;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+}
+img{
+    width: 200px;height: 200px;
+}
+#cat-outer>div{
+ width: 300px;
+ border: 1px solid gray;
+ margin: 5px;
+ padding: 10px;
+ text-align: center;
+}
+</style>
+
+
+<div id="cat-outer" class="winter">
+    <div>
+        <form name="frm0">
+            <ul>
+                <li><img src=""></li>
+                <li>LG 사진</li>
+                <li>100,050,000원</li>
+                <li><button onclick="ShowItemInfo(0)">CART</button><button onclick="">BuyNow</button></li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+<div id="cat-outer" class="winter">
+    <div>
+        <form name="frm1">
+            <ul>
+                <li><img src=""></li>
+                <li>SAMSUNG 사진</li>
+                <li>200,050,000원</li>
+                <li><button onclick="ShowItemInfo(1)">CART</button><button onclick="">BuyNow</button></li>
+            </ul>
+        </form>
+    </div>
+</div>
+
+
+<div id="cat-outer" class="winter">
+    <div>
+        <form name="frm2">
+            <ul>
+                <li><img src=""></li>
+                <li>ASUS</li>
+                <li>59,050,000원</li>
+                <li><button onclick="ShowItemInfo(2)">CART</button><button onclick="">BuyNow</button></li>
+            </ul>
+        </form>
+    </div>
+</div>
+<script>
+
+//모든form가져오기 
+formlist = document.forms;
+function ShowItemInfo(idx){
+  isok=confirm(
+      '상품명:' + formlist[idx].children[0].children[1].innerHTML+'\n'
+      +'상품가격:  '+formlist[idx].children[0].children[2].innerHTML+'\n'
+      +'장바구니에담을까요'
+  )
+  
+
+
+
+}
+
+
+</script>
+
+</body>
+</html>

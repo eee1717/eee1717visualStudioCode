@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<input type="text" id="dan"><button onclick="googoodan()">출력</button> 
+<hr>
+<div id="output">
+
+
+
+</div>
+    <script>
+           
+     function googoodan(){
+         // input type=text id =dan 요소 찾기 getElementById()를통해서 dan을찾아내고 안의값을 value로 
+      let dan=document.getElementById('dan').value;
+      let output=document.getElementById('output');
+            
+    //html코드저장
+    let code;
+
+    code+='<table>';
+        for(i=1;i<=9;i++){
+            code+='<tr>'; 
+                code+='<td>'+ dan +'</td>';
+                code+='<td>'+ 'x' + i +'=' +'</td>';
+                code+='<td>'+ (dan*i) +'</td>';
+            code+='</tr>';
+        }
+          code+='</table>';
+
+
+
+  
+
+          output.innerHTML=code;
+    //   alert(dan);
+      document.getElementById('dan').value='';
+     }
+//구구단 table로 출력
+    </script>
+
+
+</body>
+</html>

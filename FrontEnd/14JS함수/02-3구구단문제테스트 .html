@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<style>
+   
+    tr{width: 100px;height: 50px; margin: 5px;  }
+    td{ width: 100px; height: 50px;  background-color: rgb(241, 150, 150); }
+    th{width: 100px;height: 50px;background-color: antiquewhite;
+    }
+ 
+</style>
+
+
+
+
+
+
+<script>
+           
+    //구구단2단~9단 table로 출력 실패
+    
+
+    
+        document.write("<table border>");
+    document.write("<tr>");
+    for(let i = 2; i<=9; i++) {
+        document.write("<th>" + i + "단");    
+    }
+    document.write("</tr>");
+    document.write("<tr>");
+    for(let i = 2; i <= 9; i++) {
+        for(let j = 1; j<=9; j++) {
+            document.write("<tr>");    
+            document.write("<td>"+ i + "</td>");    
+            document.write("<td>"+ "x" + "</td>");  
+            document.write("<td>"+ j + "</td>");    
+            document.write("<td>"+ "=" + "</td>");    
+            document.write("<td>"+ i*j + "</td>");    
+            document.write("</tr>");   
+            document.write ("</th>");  
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+    document.write("<hr>");
+    
+        </script>
+
+
+</body>
+</html>

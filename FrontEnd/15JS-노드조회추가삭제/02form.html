@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- form태그찾기 -->
+<!-- form[0] -->
+<form>
+    
+    <input type="text"> <!-- form[0][0] -->
+    <input type="password"> <!-- form[0][1] -->
+    <input type="checkbox"> <!--form[0][2]-->
+</form>
+
+<!-- form[1] -->
+<form>
+    <input type="text"> <!-- form[1][0] -->
+    <input type="password"> <!-- form[1][1] -->
+</form>
+<!-- form[2] -->
+<form>
+    <input type="text"> <!-- form[2][0] -->
+    <input type="password"> <!-- form[2][1] -->
+</form>
+<!-- form[3] -->
+<form name="frmtest">
+    <input type="text"> <!-- form[3][0] -->
+    <input type="password"> <!-- form[3][1] -->
+</form>
+
+<script>
+
+//모든 form을 가져옴 
+let forms =document.forms;
+// alert('폼의개수:' + forms.length);
+
+forms[0][0].value="안녕하세요~";
+forms[0][1].value="1234~";
+forms[0][2].checked='true';
+
+forms[1][0].value="hello world";
+forms[1][1].value="123456789";
+
+
+// form의 name으로 찾기  실패 
+frm=document.frm;
+
+frm[0].value='frmtest확인';
+
+
+
+</script>
+
+
+</body>
+</html>

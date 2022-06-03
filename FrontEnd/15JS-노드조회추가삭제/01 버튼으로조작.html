@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!-- 1 tagname -->
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+        <li>item 6</li>
+        <li>item 7</li>
+        <li>item 8</li>
+    </ul>
+
+<script>
+    // tagname찾기 여러개의요소도 찾을수있다 id의경우는 1개의요소만찾을수있다.
+    // 배열형
+    let li = document.getElementsByTagName('li');
+    //  alert(li.lenth);
+
+    // li[0].style.backgroundColor='orange';
+    // li[1].style.color='red';
+    // li[2].innerHTML+='hihi';
+
+     for(i=0;i<li.length;i++){
+         li[i].style.backgroundColor='rgb('+(60*i)+','+(10*i)+','+(40*i)+')'
+         li[i].style.color='while';
+     }
+   
+</script>
+<!-- li태그를 6개 있는 ul태그를 만들어서 자바스크립트 코드를 이용해서 prompt로 문자열을 6개 입력받아 각 li에 넣어주도록한다.  -->
+
+
+</body>
+</html>
