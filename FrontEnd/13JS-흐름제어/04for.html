@@ -9,12 +9,18 @@
 <body>
     <style>
         ul{list-style:none;padding:0px;}
+        .depth1{
+         
+        }
         .depth1>li{
             width:200px;height:50px;
             margin:2px;
             background-color:aquamarine;
             text-align:center;
             line-height:50px;
+            position:relative;
+            left:0px;
+            top:0px;
         }
         .depth2>li{
             width:200px;height:30px;
@@ -33,12 +39,12 @@
         }
         .depth2{
             display:none;
-            position:relative;
-            left:0px;
-            top:0px;
+            position:absolute;
+            left:-2px;
+            top:50px;
         }
         .depth1>li:hover{
-            height:200px;
+            height:220px;
         }
         .depth1>li:hover .depth2{
            display:block;

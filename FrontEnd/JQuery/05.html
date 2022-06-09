@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!-- JQ -->
+     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+<body>
+    
+
+
+
+<script>
+   // 1 object 
+//    let obj1 = {'name':'hong','age':'44','height':'177.5','weight':'77'};
+
+   alert(typeof obj1);
+
+
+//    //JS 자바스크립트
+//    for( key in obj1){
+//        document.write('key:'+key+"<br>");
+//        document.write('value:'+obj1[key]+"<br><br>");  //파이썬의 방식과 유사한 방식이다 . 나중에 백엔드할때 선별해서 원하는것만 추려내는 방식을 이용하기떄문에 미리 연습해둘것 
+     
+//     }
+
+//    //JQ 제이쿼리
+//     $.each(obj1,function(key,value){
+//         document.write('K :'+key+',V:'+value+"<br>");
+//     })  //object형 객체전달
+
+    //2 object(배열형)
+    // let obj2 = ['hong1','44','177.5','77.7'];
+
+    // //JS
+    //   for(i in obj2){
+    //       document.write('K: '+i+", V :"+obj2[i]+"<br>");
+    //   }
+
+    // //JQ
+    // $.each(obj2,function(key,value){
+    //       document.write('K:'+key+',V:'+value+"<br>");
+    // })
+
+
+let person =
+{
+    'name':'hong',
+    'age': '30',
+    'major':'컴퓨터공학',
+    'certificate':['정보처리기사','CCNA','COS-JAVA','리눅스마스터']
+
+}
+
+// JQ = 모든속성 /값 출력
+//  $.each(person,function(key,value){
+//      document.write('K:'+key+'V:'+person[key]+"<br>");
+//  })
+
+// JQ - 자격증 리스트만 출력 
+$.each(person,function(key,value){
+    if(key=='certificate'){
+        cert= person[key];
+        $.each(cert,function(k,v){
+
+            document.write('K:'+k+'V:'+key[v]+"<br>");
+        })
+    
+    }
+ })
+
+</script>
+
+
+
+</body>
+</html>

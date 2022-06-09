@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--1  tagname -->
+
+    <!-- <ul>
+        <li>ITEM 1</li>
+        <li>ITEM 2</li>
+        <li>ITEM 3</li>
+        <li>ITEM 4</li>
+        <li>ITEM 5</li>
+        <li>ITEM 6</li>
+        <li>ITEM 7</li>
+        <li>ITEM 8</li>
+    </ul>
+
+    <script>    
+        // 배열형
+        let li = document.getElementsByTagName('li');
+        // alert(li.length);
+
+        // li[0].style.backgroundColor='orange';
+        // li[1].style.color='red';
+        // li[2].innerHTML+=' hihi';
+
+        for(i=0;i<li.length;i++){
+            li[i].style.backgroundColor='rgb('+(60*i)+','+(10*i)+','+(40*i)+')'
+            li[i].style.color='white';
+        }
+    </script> -->
+
+
+    <!--
+        문제 
+        li태그가 3 개 있는 ul태그를 만듭니다
+        자바스크립트 코드를 이용해서 prompt로 문자열을 3개를 입력받아
+        각 li에 넣어주도록 합니다.
+     -->
+
+     <!-- 2 form 태그 찾기 -->
+
+   
+     <!-- form[0] -->
+
+     
+     <form>
+         
+         <input type="text"> <!-- form[0][0] -->
+         <input type="password"><!-- form[0][1] -->
+         <input type="checkbox"><!-- form[0][2] -->
+     </form>
+     <br>
+       <!-- form[1] -->
+     <form>
+        <input type="text"><!-- form[1][0] -->
+        <input type="password"><!-- form[1][1] -->
+    </form>
+    <br>
+     <!-- form[2] -->
+    <form>
+        <input type="text"><!-- form[2][0] -->
+        <input type="password"><!-- form[2][1] -->
+    </form>
+    <!-- form[3] -->
+    <form name="frmtest">
+        <input type="text"> 
+        <input type="password"> 
+    </form>
+    <script>
+        // 모든 form을 가져옴 
+        let forms = document.forms;
+        // alert('폼의 개수 : ' + forms.length);
+        forms[0][0].value="안녕하세요~";
+        forms[0][1].value="1234인";
+        forms[0][2].checked = 'true';
+
+        forms[1][0].value="Hello world";
+        forms[1][1].value="123456789";
+        
+        // form의 name으로 찾기
+        frm=document.frmtest;
+        frm[0].value='frmtest확인'; 
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

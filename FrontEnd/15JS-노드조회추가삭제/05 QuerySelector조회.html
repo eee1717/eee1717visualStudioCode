@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        ul{list-style:none;padding:0px;
+            border : 1px solid gray; width:200px;
+        }
+        #depth1>li:hover #depth2{
+            display:block;
+        }
+        #depth2{
+            display:none;
+        }
+        a{
+            display:block;
+        }
+        
+    </style>
+    <ul id="depth1">
+       <li>
+           <a href="#">Menu</a>
+           <ul id="depth2">
+               <li>SubMenu</li>
+               <li>SubMenu</li>
+               <li>SubMenu</li>
+           </ul>
+       </li> 
+    </ul>
+    
+    <script>
+      let depth1=document.querySelector('#depth1>li>a');
+      depth1.style.backgroundColor='orange';
+      let depth2=document.querySelectorAll('#depth2>li');
+      depth2[0].style.color='red';
+      depth2[1].style.color='orange';
+      depth2[2].style.color='green';
+    </script>
+
+</body>
+</html>

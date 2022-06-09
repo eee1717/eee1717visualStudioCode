@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #d1{width:50px;height:50px;background-color:gray;}
+    </style>
+    <button onclick="func1()">BG:Orange</button>
+    <button onclick="func2()" >BG:gray</button>
+    <button onclick="func3()">Moving</button>
+    <button onclick="func4()">back</button> 
+    <button onclick="func5()">init</button> 
+    <button onclick="func6()">UP</button> 
+    <button onclick="func7()">DOWN</button> 
+    <button onclick="func8()">LEFT</button> 
+    <button onclick="func9()">RIGHT</button> 
+    <hr>
+    <div style="width:550px;height:550px;border :1px solid gray;position:relative;">
+        <div id="d1" style="position:relative;left:0px;top:0px;"></div>
+    </div>
+    <script>
+        function func1(){
+            // d1태그의 백그라운드 Orange;
+            d1tg = document.getElementById("d1");
+            d1tg.style.backgroundColor='orange';
+        }
+        function func2(){
+            // d1태그의 백그라운드 Orange;
+            d1tg = document.getElementById("d1");
+            d1tg.style.backgroundColor='gray';
+        }
+        let xpos=0;
+        let ypos=0; let deg=0;
+        function func3(){
+            d1tg = document.getElementById("d1");
+            if((xpos+100)>500||(ypos+100)>500)
+            {
+                alert('이동불가');
+            }else{
+                d1tg.style.transform='translate('+(xpos+=100)+'px,'+(ypos+=100)+'px) rotate('+(deg+=180)+'deg)' ;
+                d1tg.style.transition='1s';
+            }
+        }
+        function func4(){
+            d1tg = document.getElementById("d1");
+            if((xpos-100)<0||(ypos-100)<0)
+            {
+                alert('이동불가');
+            }
+            else{
+            d1tg.style.transform='translate('+(xpos-=100)+'px,'+(ypos-=100)+'px) rotate('+(deg-=180)+'deg)' ;
+            d1tg.style.transition='1s';
+            }
+
+          
+
+        }
+        function func5(){}
+
+
+          // KeyEvent
+           
+          document.addEventListener('keydown' ,function(){
+                d1tg = document.getElementById("d1");
+                // UP : 38
+                //DOWN : 40
+                //LEFT : 37
+                //RIGHT : 39
+                switch(event.keyCode){
+                    case 37:
+                         
+                        d1tg.style.transform='translate('+(xpos-=20)+'px,'+(ypos+=0)+'px)';
+                       
+                        break;
+                    case 38:
+                     !
+                        d1tg.style.transform='translate('+(xpos-=0)+'px,'+(ypos-=20)+'px)';
+                       
+                        break;
+                    case 39 :
+                     
+                        d1tg.style.transform='translate('+(xpos+=20)+'px,'+(ypos+=0)+'px)';
+                        
+                        break;
+                    case 40 :
+                  
+                        d1tg.style.transform='translate('+(xpos+=0)+'px,'+(ypos+=20)+'px)';
+                       
+                        break;
+                }
+                
+
+            })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="dan"><button onclick="googoodan()">출력</button>
+    <hr>
+    <div id="output">
+
+    </div>
+    <script>
+        function googoodan(){
+            // input type=text id=dan 요소 찾기
+            let dan=document.getElementById('dad').value;
+            let output = document.getElementById('output');
+
+            // html 코드 저장   
+            let code='<table>';
+            for(i=1;i<=9;i++){
+                code+='<tr>';
+                code+='<td>'+dan+'</td>';
+                code+='<td>'+i+'</td>';
+                code+='<td>'+(dan*i)+'</td>';
+                code+='</tr>';
+            }
+            code+='</table>';
+               
+            output.innerHTML=code;
+            // alert(dan);
+            document.getElementById('dan').value='';
+
+        }
+    </script>
+</body>
+</html>

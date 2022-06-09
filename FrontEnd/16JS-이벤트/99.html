@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    test!
+    output="";
+
+    <script>
+       var output = "";
+       for(var info in screen){
+           output = output + info + ':' + Navigator[info] + '<br>';
+       } 
+       document.write(output);
+    </script>
 </body>
 </html>

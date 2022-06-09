@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <ul class="depth1">
+         <li>
+             <a href="#">MENU1</a>
+             <ul class="depth2">
+                <li><a href="#">Submenu1</a></li>
+                <li><a href="#">Submenu2</a></li>
+                <li><a href="#">Submenu3</a></li>
+             </ul>
+         </li>
+
+         <li>
+            <a href="#">MENU2</a>
+            <ul class="depth2">
+               <li><a href="#">Submenu1</a></li>
+               <li><a href="#">Submenu2</a></li>
+               <li><a href="#">Submenu3</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">MENU3</a>
+            <ul class="depth2">
+               <li><a href="#">Submenu1</a></li>
+               <li><a href="#">Submenu2</a></li>
+               <li><a href="#">Submenu3</a></li>
+            </ul>
+        </li>
+     </ul>
+
+     <style>
+     
+     </style>
+     <script>
+         
+         $('.depth1>li>a')
+         .css('background-Color','orange')
+         .css('display','block')
+         .css('width','150px')
+         .css('height','30px');
+
+
+//depth2 안의 모든 li들이 margin-top 2px ,  background-color 베이지 색으로 
+// height : 25px 로 만들기 
+
+
+   $('.depth2>li').css('background-color','beige').css('magin-top','2px');
+
+
+
+     </script>
+
+
+</body>
+</html>

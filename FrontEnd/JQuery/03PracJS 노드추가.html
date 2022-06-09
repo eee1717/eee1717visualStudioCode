@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- JQ -->
+     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <input id="txt"><button onclick="func1()">추가</button>
+    <hr>
+    <ul id="travel"></ul>
+
+
+
+    <!-- 자바스크립트의내용을 제이쿼리로변경해보기 -->
+    <script>
+      let travel = $('#travel');
+
+        // let travel = document.getElementById('travel');
+
+        function func1(){
+        //   let newli = document.createElement('li');   
+        //   let txttg = document.getElementById('txt');
+        //   newli.innerHTML=txttg.value;
+        //   travel.prepend(newli);
+        //   txttg.value="";
+
+       let value = $('#txt').val();
+        // $('#travel').append('<li>'+value+'</li>');  //입력한 내용이 가장맨위로
+        $('#travel').prepend('<li>'+value+'</li>'); //입력한 내용이 가장맨밑로
+        $('#txt').val(''); 
+            //텍스트박스에 가고 싶은 여행지를 입력하고 버튼을 누르면
+            //travel에 li태그가 추가될수  있도록 합니다
+        }
+    </script>
+
+</body>
+</html>

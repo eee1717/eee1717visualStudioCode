@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        input{
+            width :100px;
+            height:20px;
+            margin:2px;
+        }
+     
+        body{
+            width : 80%;
+            margin:0px auto;
+        }
+        #colname{
+            display:flex;
+            
+        }
+        #colname>*{
+            margin:2px;
+        }
+        #output{
+            margin : 0px auto
+        }
+
+        .pricebtn{
+            width :100px;
+            height:20px;
+            margin:2px;
+        }
+    </style>
+
+    <!-- 클립보드 값 가져오기 -->
+    <input id="price" style="height:20px" placeholder="대관료"><br>
+    <input id="time" style="height:20px" placeholder="사용시간">
+    <input id="tprice" style="height:20px" placeholder="총사용액" disabled>
+    <button>계산하기</button>
+    <button onclick="window.location.reload()">새로고침</button>
+    <hr>
+    <div id="output"></div>
+    
+
+
+    <script>
+
+
+        function handlePaste (e) {
+        
+               var clipboardData, pastedData;     
+            // Stop data actually being pasted into div    
+            e.stopPropagation();    e.preventDefault();     
+            // Get pasted data via clipboard API    
+            clipboardData 
+            = e.clipboardData || window.clipboardData;    
+            pastedData = clipboardData.getData('Text');        
+            // Do whatever with pasteddata    
+            //alert(pastedData);         
+            // document.getElementById('testId').append(pastedData)
+            
+            
+            list = pastedData.split(" ");
+            
+
+
+            output =document.getElementById('output')
+            
+            price = document.getElementById('price').value;
+            time = document.getElementById('time').value;
+            
+            document.getElementById('tprice').value = (price*time);
+            tprice = (price*time)/list.length;
+
+            
+            
+            // 노드 생성
+            for(i=0;i<list.length;i++){
+                 
+
+                divtg = document.createElement('div')
+                intg1 = document.createElement('input');
+                intg1.setAttribute('id','in'+i);
+                intg1.value=list[i];
+            
+                intg2 = document.createElement('input');
+                intg2.setAttribute('disabled','true');
+                intg2.setAttribute('class','charge'+i);
+                intg2.value=tprice;
+
+               
+   
+
+               
+                divtg.append(intg1);
+                divtg.append(intg2);
+                output.append(divtg);
+
+            }
+
+            // 마지막 계산하기
+        }
+        document.addEventListener('paste', handlePaste);
+
+
+
+        function getprice(){
+
+        }
+        function totalprice(){
+
+        }
+
+    </script>
+</body>
+</html>

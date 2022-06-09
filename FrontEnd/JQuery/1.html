@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- JQ -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    
+    <div id="d1">HELLO WORLD</div>
+    <div id="d2" class="item">HELLO WORLD</div>
+    <div id="d3">HELLO WORLD</div>
+    <div id="d4" class="item">HELLO WORLD</div>
+
+
+<style>
+
+</style>
+<script>
+    /* 자바스크립트  */
+   document.getElementById('d1').style.backgroundColor='red';
+   //JQ로 작성하기
+//    $('#d1').css('속성명','값').css('속성명','값')와같이 이어붙이기가능; 
+$('#d1').css('background-color','blue').css('color','white');
+//d3찾아서 글자색 yellow로변경
+$('#d3').css('color','yellow');
+//d4찾아서 width:400 ,height:400 border:1px solid gray;
+$('#d4').css('width','400').css('height','400').css('border','1px solid black' );
+
+//클래스
+$('.item').css('font-size','3rem');
+</script>
+
+
+
+</body>
+</html>
