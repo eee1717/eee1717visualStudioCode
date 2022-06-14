@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+ <!-- JQ -->
+ <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+</head>
+<body>
+    <style>
+        body{ margin: 0px;}
+        #quick{height: 40px; border: 1px solid gray;}
+        #nav{list-style: none; padding: 0px; height: 80px;
+        border: 1px solid gray;
+    background-color: white;}
+        ul{ list-style: none;  display: flex; justify-content: space-around;}
+        #b1{height: 1000px;background-color: antiquewhite;
+             margin: 0px;
+             padding: 0px;
+            }
+        #b2{height: 1000px;background-color: rgb(216, 201, 183);}
+        #b3{height: 1000px;background-color: rgb(189, 252, 197);}
+    </style>
+
+
+
+<div id="wrapper">
+   <div id="quick"></div>
+   <div id="nav">
+     <ul>
+            <li>Menu1</li>
+            <li>Menu2</li>
+            <li>Menu3</li>
+            <li>Menu4</li>
+     </ul>
+</div>
+
+<style>
+
+    #item1
+    {
+    border: 1px solid gray;
+    background-color: yellow;
+    width: 300px;height: 300px;
+    position: relative;
+    left: 100px;
+   
+    }
+    #item2
+    {
+    border: 1px solid gray;
+    background-color: rgb(165, 248, 220);
+    width: 200px;height: 200px;
+    position: relative;
+    left: 800px;top: 0px;
+    }
+</style>
+
+
+        <div  id="b1"> 
+           <div id="item1"></div>
+           <div id="item2"></div>
+         
+        </div>
+         <!-- 문제  -->
+
+        <div  id="b2">body2</div>
+        <div  id="b3">body3</div>
+</div>
+
+<script>
+    // 
+    $(document).ready(function(){
+        $(window).on('scroll',function(){
+            topval=$(this).scrollTop();
+            console.log(topval);
+            
+            if(topval>=50)
+            {
+                  $('#nav')
+                  .css('position','fixed')
+                //fixed로하면 퀵메뉴가 따라오지않는다.
+                //  relative로하면 nav가 고정되어서 움직이지않음 
+                //이걸 둘다이용해서 일정높이에서만 relative를 사용하게하고 
+                //평소에는 fixed를사용하게한다.
+                //   .css('position','relative')
+                  .css('width','100%')
+                  .css('left','0px')
+                  .css('top','0px')      
+                  
+                  $('#item1').css('position','fixed')
+                  .css('top','80px')
+
+                  $('#item2').css('position','fixed')
+               
+                    
+                  
+                  
+
+            }
+            else
+            {
+                $('#nav')
+                .css('position','relative')
+                  .css('width','100%')
+                  .css('left','0px')
+                  .css('top','0px')  
+
+                  $('#item1').css('position','relative')
+                  .css('top','0px')
+               
+              
+
+            }
+        })
+    })
+</script>
+
+
+
+</body>
+</html>

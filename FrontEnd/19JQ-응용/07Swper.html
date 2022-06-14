@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+ <!-- JQ -->
+ <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+<!-- JQ Swiper -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<!-- Swiper 사이트 https://swiperjs.com/get-started -->
+
+</head>
+
+<body>
+    
+<style>
+    ul{list-style: none; padding: 0px;}
+    .swiper-button-prev{ color: rgb(255, 0, 221); }
+    .swiper-button-next{ color: rgb(47, 0, 255);  }
+    /* .swiper{ width: 50%;} */
+    .swiper-pagination{
+        height: 50px;
+     }
+    /* span내용물은 웹페이지 console창을 통해서 확인할수있다. */
+    .swiper-pagination>span{ background-color: rgb(155, 255, 255);
+    height: 20px; width: 20px;}
+
+  .swiper-button-next{
+    width: 100px; height: 100px;
+    background: url('icon/btn_start_hover.png') no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+  }
+  .swiper-button-prev{
+    width: 100px; height: 100px;
+    background: url('icon/btn_start_hover.png') no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+  }
+</style>
+
+
+
+<div id="container"  class="swiper">
+    <ul id="banner" class="swiper-wrapper">
+        <li class="swiper-slide"><a href="#"><img src="img/banner1.jpg" width="300px" ></a></li>
+        <li class="swiper-slide"><a href="#"><img src="img/banner2.jpg" width="300px"></a></li>
+        <li class="swiper-slide"><a href="#"><img src="img/banner3.jpg" width="300px" ></a></li>
+        <li class="swiper-slide"><a href="#"><img src="img/banner4.jpg" width="300px" ></a></li>
+    </ul>
+
+<!-- 페이지네이션 div -->
+
+<div class="swiper-pagination"></div>
+
+
+<!-- 버튼 div -->
+<div class="swiper-button-prev"></div>
+<div class="swiper-button-next"></div>
+<!-- If we need scrollbar -->
+<div class="swiper-scrollbar"></div>
+</div>
+
+<script>
+ const swiper = new Swiper('.swiper',{
+
+    // 이전/이후 버튼 
+
+
+    // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+   // If we need pagination pagination관련코드
+   pagination: {
+    el: '.swiper-pagination',
+    type :'bullets',//progressbar,fraction.이란효과도있다.
+    //  type :'progressbar',
+    // pagination을 클릭시 지정된 사진으로 이동됨. 
+    clickable:'true'
+  },
+//   스크롤바 적용관련코드
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: false,
+  },
+  //방향
+  direction:'horizontal',//수직이동으로 바뀐다.  vertical(수직),horizontal(수평) 
+  slidesPerView:1, // 한번에 보이는 페이지수
+  //마우스 훨 사용 
+  mousewhell:true,
+
+  //페이지 전환효과
+  effect : 'fade',
+  speed  :  1000,
+   //자동스크롤링 2초뒤에 자동이동
+   autoplay:{
+    delay:2000,
+    //효과 마우스를 가까이대면 정지함. 근데작동안함.
+    disableOnInteraction:false,
+   }
+ });
+</script>
+
+
+</body>
+</html>

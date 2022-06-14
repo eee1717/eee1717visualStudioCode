@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ <!-- JQ -->
+ <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- JQ Swiper -->
+ <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<!-- Swiper 사이트 https://swiperjs.com/get-started -->
+
+
+</head>
+<body>
+    <style>
+        ul{list-style: none;
+        padding: 0px;}
+        #container{
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            margin: 100px auto;
+            padding: 10px;
+            position: relative;
+        }
+        #tabUI>ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        #tabUI li{
+            width: 120px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+           
+            border: 1px solid gray;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            background-color: beige;
+        }
+        #tabContents{
+            border: 1px solid black;
+            height: 82%;
+        }
+        #tabContents div{
+            display: none;
+        }
+       
+        #tabUI  .on{
+            background-color: orange;
+        }
+          /* .on은 class on 이니 착각하지말것 */
+        #tabContents .on{
+            display: block;
+        }
+    </style> 
+
+<div id="wrapper">
+   <div id="container">
+            <div id="tabUI">
+                <ul>
+                    <li class="on">Tab1</li>
+                    <li>Tab2</li>
+                    <li>Tab3</li>
+                    <li>Tab4</li>
+                </ul>
+            </div>
+            <div id="tabContents"> 
+                <div class="on">Tab1 Content</div>
+                <div>Tab2 Content</div>
+                <div>Tab3 Content</div>
+                <div>Tab4 Content</div>
+            </div>
+
+   </div>
+</div>  
+
+<script>
+    $(document).ready(function(){
+        $("#tabUI>ul li").on('click',function(){
+            // 이코드를통해서 위치를 확인한다.
+            // alert($(this).html()+"!");
+            alert($(this).index());
+
+             idx = $(this).index();
+
+            //  이코드덕분에 tab1을 클릭할시 색깔이 변한다. 이코드를이용하면 클릭한 tab으로 "on"이 이동한다. this로하면 안되니 주의 제대로안되고있다.
+             $('#tabUI>ul li').removeClass("on");
+             $('#tabUI>ul li').eq(idx).addClass("on");
+            //  tabContents의 4가지div가 전부가져와진다.
+             $('#tablContents>div').removeClass("on");
+             $('#tablContents>div').eq(idx).addClass("on");
+
+        })    
+
+    });
+</script>
+
+
+
+</body>
+</html>
